@@ -29,7 +29,6 @@ export const HeroView = ({history}) => {
         publisher,
         alter_ego,
         first_appearance,
-        characters,
     } = hero;
     
    
