@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../auth/AuthContext';
+
 
 export const LoginView = ({history}) => {
+    
+    
+    const {dispatch} = useContext(AuthContext);
+
+    const user = {
+        name: 'Quim',
+    }
 
     const handleLogin = () => {
-    //   history.push('/');
-      history.replace('/');
+       
+        const newLogin = {
+            type: '[auth] login',
+            payload: user,
+        }
+        dispatch(newLogin);
+        
+        history.replace('/');
     }
 
     return (
