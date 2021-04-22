@@ -5,6 +5,7 @@ import { AuthContext } from '../auth/AuthContext';
 export const LoginView = ({history}) => {
     
     
+    
     const {dispatch} = useContext(AuthContext);
 
     const user = {
@@ -12,14 +13,18 @@ export const LoginView = ({history}) => {
     }
 
     const handleLogin = () => {
-       
+
+        
         const newLogin = {
             type: '[auth] login',
             payload: user,
         }
+        
+        const lastPath = localStorage.getItem('lastPath') || '/';
+
         dispatch(newLogin);
         
-        history.replace('/');
+        history.replace(lastPath);
     }
 
     return (
