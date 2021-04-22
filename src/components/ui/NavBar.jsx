@@ -22,7 +22,7 @@ export const Navbar = () => {
             
             <Link 
                 className="navbar-brand" 
-                to="/"
+                to="heroes-app/"
             >
                 Super Heroes
             </Link>
@@ -34,7 +34,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/marvel"
+                        to="heroes-app/marvel"
                     >
                         Marvel
                     </NavLink>
@@ -43,7 +43,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/dc"
+                        to="heroes-app/dc"
                     >
                         DC
                     </NavLink>
@@ -52,7 +52,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/search"
+                        to="heroes-app/search"
                     >
                         Search
                     </NavLink>
